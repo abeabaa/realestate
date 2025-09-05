@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 # 한글 폰트 설정 (Windows)
-plt.rcParams['font.family'] = 'Nanum Gothic'
+plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 # 파일 경로 (배포용은 GitHub 또는 cloud storage 경로 권장)
@@ -58,6 +58,7 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
