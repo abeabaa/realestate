@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import os
 
-font_path = os.path.join("fonts", "NanumGothic.ttf")
+font_path = os.path.join("fonts", "NanumGothic-Bold.ttf")
 
 if os.path.exists(font_path):
     fontprop = fm.FontProperties(fname=font_path)
@@ -70,4 +70,5 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
