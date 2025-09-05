@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import os
 
-font_path = os.path.join("fonts", "NanumGothic-Bold.ttf")
+font_path = os.path.join("fonts", "NanumGothic-Regular.ttf")
 
 if os.path.exists(font_path):
     fontprop = fm.FontProperties(fname=font_path)
@@ -17,8 +17,8 @@ else:
 plt.rcParams['axes.unicode_minus'] = False
 
 # 한글 폰트 설정 (Windows)
-plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
+#plt.rcParams['font.family'] = 'Malgun Gothic'
+#plt.rcParams['axes.unicode_minus'] = False
 
 # 파일 경로 (배포용은 GitHub 또는 cloud storage 경로 권장)
 file_path = "20250818_주간시계열.xlsx"
@@ -70,5 +70,6 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
