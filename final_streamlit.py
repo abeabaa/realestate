@@ -49,15 +49,16 @@ ax.scatter(data[f"{region}_매매"], data[f"{region}_전세"], alpha=0.6, label=
 
 if not data.empty:
     latest = data.iloc[-1]
-    ax.scatter(latest[f"{region}_매매"], latest[f"{region}_전세"], color="red", s=100, label="최근 주간")
+    ax.scatter(latest[f"{region}_sale"], latest[f"{region}_jeonse"], color="red", s=100, label="latest week")
 
-ax.set_title(f"{region} 부동산 4분면 그래프")
-ax.set_xlabel("매매 증감률 (%)")
-ax.set_ylabel("전세 증감률 (%)")
+ax.set_title(f"{region} graph")
+ax.set_xlabel("sale (%)")
+ax.set_ylabel("jeonse (%)")
 ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
