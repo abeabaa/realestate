@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +7,7 @@ plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 # 파일 경로 (배포용은 GitHub 또는 cloud storage 경로 권장)
-file_path = "C:/Users/terra/OneDrive/바탕 화면/부동산 4분면/20250818_주간시계열.xlsx"
+file_path = "20250818_주간시계열.xlsx"
 
 # --- 데이터 불러오기 ---
 # 매매증감
@@ -62,4 +56,3 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
-
