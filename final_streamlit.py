@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import os
 
+# 프로젝트 내부 폰트 경로
 font_path = os.path.join("fonts", "NanumGothic-Regular.ttf")
 
 if os.path.exists(font_path):
     fontprop = fm.FontProperties(fname=font_path)
     plt.rc('font', family=fontprop.get_name())
 else:
-    # 폰트 없으면 기본값
-    plt.rc('font', family="DejaVu Sans")
+    plt.rc('font', family="DejaVu Sans")  # fallback
 
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -70,6 +70,7 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
