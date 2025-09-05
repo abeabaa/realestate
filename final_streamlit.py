@@ -2,6 +2,20 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import matplotlib.font_manager as fm
+import os
+
+font_path = os.path.join("fonts", "NanumGothic.ttf")
+
+if os.path.exists(font_path):
+    fontprop = fm.FontProperties(fname=font_path)
+    plt.rc('font', family=fontprop.get_name())
+else:
+    # 폰트 없으면 기본값
+    plt.rc('font', family="DejaVu Sans")
+
+plt.rcParams['axes.unicode_minus'] = False
+
 # 한글 폰트 설정 (Windows)
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
@@ -56,3 +70,4 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
